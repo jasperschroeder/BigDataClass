@@ -1,3 +1,8 @@
 RESEARCH PROPOSAL 
 
 Starting point of our analysis are two datasets: An already created dataset consisting of comment activity in the reddit forum "Cryptocurrency" in the time period of Nov 2017 - March 2018. Next to that, a dataset consisting of the bitcoin price in the same time period will be gathered. The point of this analysis is to investigate the interrelation between the two and to find out which effects the effect of price movement has on activity in the forum. This can include if higher volatility/prices will lead to higher activity in the forum. Other hypothesis could be that higher prices will lead to more new users. Next to that, sentiment analysis/topic modeling - which topics are discussed, how do they relate to the price of bitcoin? Does sentiment change over time? 
+
+Other than that we may go down the rabbit hole of doing prediction such as predicting the number of comments in a week as a function of the bitcoin price etc. 
+
+The project will fit in well with the course as it employs a lot of different techniques and techniques that are taught in the class, such as: Topic Modeling, (Un-)Supervised Learning, etc. 
+
