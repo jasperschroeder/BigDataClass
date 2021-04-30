@@ -58,7 +58,7 @@ def scraping(first_epoch, last_epoch, filename):
             try:
                 tmp_texts.append(post['selftext'])
             except:
-                tmp_exts.append(math.nan)
+                tmp_texts.append(math.nan)
 
         try:
             if max(tmp_times) not in timestamps:
