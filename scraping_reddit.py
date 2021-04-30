@@ -12,6 +12,7 @@ import requests
 import json
 import pandas as pd
 import time
+import math
 
 #first_epoch = 1370000000 # Right before the first post in 2012
 first_epoch = 1451606400 # January 1, 2016
@@ -54,7 +55,10 @@ def scraping(first_epoch, last_epoch, filename):
             tmp_coms.append(post['num_comments'])
             tmp_ids.append(post['id'])
             tmp_titles.append(post['title'])
-            tmp_texts.append(post['selftext'])
+            try:
+                tmp_texts.append(post['selftext'])
+            except:
+                tmp_exts.append(math.nan)
 
         try:
             if max(tmp_times) not in timestamps:
@@ -79,7 +83,7 @@ def scraping(first_epoch, last_epoch, filename):
 
 
         print([str(len(ids)) + " posts collected so far."])
-        time.sleep(2)
+        time.sleep(5)
 
     # Write to a csv file
     d = {'id':ids, 'timestamp':timestamps, 'author':authors,
@@ -93,7 +97,7 @@ def scraping(first_epoch, last_epoch, filename):
 
 
 #scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")
-#scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
+scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
 
 
 #scraping(1514764800, 1530403200, filename="redditjanjun2018.csv")
