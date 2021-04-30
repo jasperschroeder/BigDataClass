@@ -83,7 +83,7 @@ def scraping(first_epoch, last_epoch, filename):
 
 
         print([str(len(ids)) + " posts collected so far."])
-        time.sleep(5)
+        time.sleep(3)
 
     # Write to a csv file
     d = {'id':ids, 'timestamp':timestamps, 'author':authors,
@@ -97,11 +97,10 @@ def scraping(first_epoch, last_epoch, filename):
 
 
 #scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")
-scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
-
+# scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
 
 #scraping(1514764800, 1530403200, filename="redditjanjun2018.csv")
-#scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")
+# scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")
 
 
 #scraping(1546300800, 1561939200, filename="redditjanjun2019.csv")
@@ -110,9 +109,6 @@ scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
 
 #scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")
 #scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")
-
-
-
 
 
 #
