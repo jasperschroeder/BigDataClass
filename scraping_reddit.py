@@ -96,4 +96,4 @@ def scraping(first_epoch, last_epoch, filename):
 #scraping(1561939200, 1577836800, filename="redditjuldec2019.csv")
 
 #scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")
-#scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")
+scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")
