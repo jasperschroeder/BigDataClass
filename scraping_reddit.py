@@ -14,10 +14,6 @@ import pandas as pd
 import time
 import math
 
-#first_epoch = 1370000000 # Right before the first post in 2012
-first_epoch = 1451606400 # January 1, 2016
-last_epoch = 1467331200 # July 1, 2016
-
 def getPushshiftData(after, before):
     url = 'https://api.pushshift.io/reddit/submission/search/'
     sort = '?sort_type=created_utc&sort=asc'
@@ -76,11 +72,6 @@ def scraping(first_epoch, last_epoch, filename):
 
 
         after = max(timestamps)
-        # if after == previous_last:
-        #     break
-        # previous_last = max(timestamp)
-
-
 
         print([str(len(ids)) + " posts collected so far."])
         time.sleep(3)
@@ -102,7 +93,7 @@ def scraping(first_epoch, last_epoch, filename):
 #scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")
 
 #scraping(1546300800, 1561939200, filename="redditjanjun2019.csv")
-scraping(1561939200, 1577836800, filename="redditjuldec2019.csv")
+#scraping(1561939200, 1577836800, filename="redditjuldec2019.csv")
 
 #scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")
 #scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")
