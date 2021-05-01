@@ -4,10 +4,6 @@
 # CHANGED VERSION #
 ###################
 
-
-
-# We go through the push API to get the ids of every post, then use the official reddit
-# API to get the contents of each post and metadata of interest.
 import requests
 import json
 import pandas as pd
@@ -83,17 +79,19 @@ def scraping(first_epoch, last_epoch, filename):
     df = pd.DataFrame(d)
     df.to_csv(filename, index=False)
 
-#scraping(1451606400, 1467331200, filename="redditjanjun2016.csv")
-#scraping(1467331200, 1483228800, filename="redditjuldec2016.csv")
+# scraping(1451606400, 1467331200, filename="redditjanjun2016.csv")     # 1
+# scraping(1467331200, 1483228800, filename="redditjuldec2016.csv")     # 2
 
-#scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")
-#scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")
+# scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")     # 3
+# scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")     # 4
 
-#scraping(1514764800, 1530403200, filename="redditjanjun2018.csv")
-#scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")
+# scraping(1514764800, 1530403200, filename="redditjanjun2018.csv")     # 5
+# scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")     # 6
 
-#scraping(1546300800, 1561939200, filename="redditjanjun2019.csv")
-#scraping(1561939200, 1577836800, filename="redditjuldec2019.csv")
+# scraping(1546300800, 1561939200, filename="redditjanjun2019.csv")     # 7
+# scraping(1561939200, 1577836800, filename="redditjuldec2019.csv")     # 8
 
-#scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")
-scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")
+# scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")     # 9
+# scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")     # 10
+
+# scraping(1609459200, 1619827200, filename="redditjanapr2021.csv")     # 11
