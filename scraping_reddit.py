@@ -85,6 +85,7 @@ def scraping(first_epoch, last_epoch, filename):
 # scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")     # 3
 # scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")     # 4
 
+# TODO: Nura and Jasper had trouble with dataset 5
 # scraping(1514764800, 1530403200, filename="redditjanjun2018.csv")     # 5
 # scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")     # 6
 
@@ -94,4 +95,4 @@ def scraping(first_epoch, last_epoch, filename):
 # scraping(1577836800, 1593561600, filename="redditjanjun2020.csv")     # 9
 # scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")     # 10
 
-# scraping(1609459200, 1619827200, filename="redditjanapr2021.csv")     # 11
+#scraping(1609459200, 1619827200, filename="redditjanapr2021.csv")     # 11
