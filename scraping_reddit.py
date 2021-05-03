@@ -85,7 +85,7 @@ def scraping(first_epoch, last_epoch, filename):
 # scraping(1483228800, 1498867200, filename="redditjanjun2017.csv")     # 3
 # scraping(1498867200, 1514764800, filename="redditjuldec2017.csv")     # 4
 
-# DONE: 5b (Nura) 
+# DONE: 5b (Nura)
 # scraping(1514764800, 1528963814, filename="redditjanjun2018a.csv")     # 5a
 # scraping(1528963814, 1530403200, filename="redditjanjun2018b.csv")     # 5b
 # scraping(1530403200, 1546300800, filename="redditjuldec2018.csv")     # 6
@@ -97,3 +97,17 @@ def scraping(first_epoch, last_epoch, filename):
 # scraping(1593561600, 1609459200, filename="redditjuldec2020.csv")     # 10
 
 #scraping(1609459200, 1619827200, filename="redditjanapr2021.csv")     # 11
+
+datasets = ['redditjanjun2016', 'redditjuldec2017', 'redditjanjun2017',
+    'redditjuldec2017', 'redditjanjun2018a', 'redditjanjun2018b',
+    'redditjuldec2018', 'redditjanjun2019', 'redditjuldec2019',
+    'redditjanjun2020', 'redditjuldec2020', 'redditjanapr2021']
+
+final_df = pd.DataFrame()
+
+for elem in datasets:
+    csv = elem + '.csv'
+    df = pd.read_csv(csv)
+    final_df = pd.concat([final_df, df])
+
+final_df.to_csv('final_dataset.csv')
