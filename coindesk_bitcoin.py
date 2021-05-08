@@ -16,7 +16,7 @@ def get_bitcoin_prices(start, end):
     prices = data['bpi']
     return prices
 
-prices = get_bitcoin_prices('2016-01-01', '2021-04-30')
+prices = get_bitcoin_prices('2016-01-01', '2021-01-01')
 
 df = pd.DataFrame(list(prices.items()), columns=['Date', 'BPI'])
 df = df.set_index('Date')
