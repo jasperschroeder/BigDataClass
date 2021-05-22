@@ -31,7 +31,7 @@ from sklearn.decomposition import LatentDirichletAllocation
 from joblib import dump, load
 
 # read in data
-df = pd.read_csv('df_final.csv')
+df = pd.read_csv('../df_final.csv')
 
 #####################
 # remove missing text
@@ -150,6 +150,3 @@ feature_df['id'] = df['id']
 # export feature_df as csv
 ##########################
 feature_df.to_csv('nlp-data/feature_df.csv', index=True)
-
-
-
