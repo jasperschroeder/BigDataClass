@@ -31,7 +31,7 @@ from sklearn.decomposition import LatentDirichletAllocation
 from joblib import dump, load
 
 # read in data
-df = pd.read_csv('../df_final.csv')
+df = pd.read_csv('df_final.csv')
 
 #####################
 # remove missing text
@@ -54,6 +54,8 @@ def stem_sentence(sentence):
     return new_sentence.strip()
 
 def clean_text(s, stem = True):
+    # lowercase
+    s = s.lower()
     # remove numbers: https://stackoverflow.com/questions/12851791/removing-numbers-from-string
     s = ''.join([i for i in s if not i.isdigit()])
     # remove punctuation:
@@ -63,6 +65,11 @@ def clean_text(s, stem = True):
         s = stem_sentence(s)
     return(s)
 
+# example for paper
+example_text = "You're a grand old flag // You're a high-flying flag // And forever in peace may you wave // "
+
+clean_text(s = example_text, stem = False)
+clean_text(s = example_text, stem = True)
 # get clean text from which to extract topics
 clean_text_df = df['text'].apply(clean_text)
 
@@ -89,6 +96,9 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 analyzer = SentimentIntensityAnalyzer()
 fn_analyzer = lambda x: analyzer.polarity_scores(x)['compound']
+
+# example for paper
+analyzer.polarity_scores(example_text)['compound'] # 0.7579
 
 # warning --slow
 sentiment = df['text'].apply(fn_analyzer)
@@ -130,7 +140,8 @@ def get_features(text, idx):
     op = pd.concat([DaleChall, sentence_df, word_df], axis=1)
     return(op)
 
-
+# example
+get_features(example_text, idx=0)
 
 # fills the feature dataframe warning --slow
 for i in range(len(df)):
@@ -150,3 +161,6 @@ feature_df['id'] = df['id']
 # export feature_df as csv
 ##########################
 feature_df.to_csv('nlp-data/feature_df.csv', index=True)
+
+
+

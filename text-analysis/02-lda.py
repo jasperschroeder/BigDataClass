@@ -32,6 +32,13 @@ my_stop_words = text.ENGLISH_STOP_WORDS.union(["https", "www", "com", "bitcoin",
                                                "crypto", "coinbase", "amp",
                                                "im", "iv", "id", "ive", "ampxb"])
 
+# example for paper
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+text_tokens = word_tokenize('your a grand old flag your a highfli flag and forev in peac may you wave')
+tokens_without_sw = [word for word in text_tokens if not word in my_stop_words]
+print(tokens_without_sw)
 
 # get the most common words
 vectorizer = CountVectorizer(lowercase=True,
