@@ -1,4 +1,4 @@
-# BigDataClass
+# Collecting and Analyzing Big Data: Semester Assignment
 Welcome! This is the repository used for the semester assignment in "Collecting and Analyzing Big Data" at KU Leuven (Acadmeic Year 2020-2021). 
 
 In the assignment, we wrote a short research paper in which we investigate the interrelation between the Bitcon price (BTC) and thread activity on the subreddit r/Bitcoin. In general, we wanted to investigate which impact the price of Bitcoin has on the thread activity, the texts put forward in the thread texts. The code put forward in this repository summarizes our work and analyses. 
