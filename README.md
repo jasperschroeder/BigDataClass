@@ -36,3 +36,14 @@ During the course of this analysis, we employ several methods, both self-taught 
 - Working with APIs
 - Latent Dirichlet Allocation
 - K-nearest neighbors (KNN)
+
+# How to Use this repository
+In this repository, several files are present. We would briefly like to explain them: 
+- Data Retrieval.ipynb: A jupyter notebook for the retrieval of data (i.e., Bitcoin Price Index via Coindesk. Powered by Coindesk (https://www.coindesk.com/price/bitcoin). Leads to two datasets:
+  - bpi.csv: A csv file containing bitcoin price index.
+  - df_final.zip: A zip-folder containing df_final.csv, a csv file containing data from the reddit 
+- Exploratory Data Analysis.ipynb: A jupyter notebook for exploratory data analysis and a few visualizations
+- Volatility.ipynb: A jupyter notebook for volatility analysis
+- Text_Analysis.ipynb: A jupyter notebook for text analysis of the thread texts, includes several chapters
+- text-analysis: A folder with several .py files, basically the same as Text_Analysis.ipynb, but in the .py file format, such that it can be executed from the command line. 
+- The remaining folders and files contain outputs, helper files etc.
