@@ -30,12 +30,12 @@ https://ojs.aaai.org/index.php/ICWSM/article/view/7347/7201
 # Preliminary Methods Employed
 During the course of this analysis, we employ several methods, both self-taught and taught during the class lectures. A few examples of those include:
 
-- Topic Modeling
+- Predictive Modeling
 - (Un-)Supervised Learning
 - Working with Data in different formats (CSV, JSON)
 - Working with APIs
-- Latent Dirichlet Allocation
-- K-nearest neighbors (KNN)
+- Text Mining
+- Topic Modeling with Latent Dirichlet Allocation
 
 # How to Use this repository
 In this repository, several files are present. We would briefly like to explain them: 
