@@ -27,7 +27,7 @@ https://github.com/pushshift/api
 https://ojs.aaai.org/index.php/ICWSM/article/view/7347/7201
 
 
-# Preliminary Methods Employed
+# Methods Employed
 During the course of this analysis, we employ several methods, both self-taught and taught during the class lectures. A few examples of those include:
 
 - Predictive Modeling
@@ -37,7 +37,7 @@ During the course of this analysis, we employ several methods, both self-taught 
 - Text Mining
 - Topic Modeling with Latent Dirichlet Allocation
 
-# How to Use this repository
+# How to Use This Repository
 In this repository, several files are present. We would briefly like to explain them: 
 - Data Retrieval.ipynb: A jupyter notebook for the retrieval of data (i.e., Bitcoin Price Index via Coindesk. Powered by Coindesk (https://www.coindesk.com/price/bitcoin). Leads to two datasets:
   - bpi.csv: A csv file containing bitcoin price index.
